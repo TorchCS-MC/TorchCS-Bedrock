@@ -1,6 +1,6 @@
 #pragma once
 
-enum class Type : unsigned int
+enum class ActorDataBoudingBoxComponentType : unsigned int
 {
     SCALE = 0,
     WIDTH = 1,
