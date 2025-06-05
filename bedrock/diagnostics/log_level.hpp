@@ -1,6 +1,6 @@
 #pragma once
 
-enum class LogLevel : unsigned
+enum class LogLevel : int
 {
     Verbose = 1,
     Info = 2,

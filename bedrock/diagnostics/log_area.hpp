@@ -1,6 +1,6 @@
 #pragma once
 
-enum class LogAreaId : unsigned int
+enum class LogAreaId : int
 {
     ALL,
     PLATFORM,
