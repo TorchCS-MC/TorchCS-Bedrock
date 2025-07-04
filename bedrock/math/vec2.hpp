@@ -2,6 +2,7 @@
 
 #include <string>
 #include <cmath>
+#include "macros.hpp"
 
 struct Vec2 {
     float x;
@@ -12,9 +13,9 @@ struct Vec2 {
     Vec2() : x(0), y(0) {}
     Vec2(float x_, float y_) : x(x_), y(y_) {}
 
-    Vec2 normalized() const;
-    Vec2 rotate(float degrees) const;
+    TORCHCS_EXPORT Vec2 normalized() const;
+    TORCHCS_EXPORT Vec2 rotate(float degrees) const;
 
-    std::string toString() const;
-    std::string toJsonString() const;
+    TORCHCS_EXPORT std::string toString() const;
+    TORCHCS_EXPORT std::string toJsonString() const;
 };

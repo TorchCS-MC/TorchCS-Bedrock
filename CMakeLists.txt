@@ -10,6 +10,7 @@ include(GNUInstallDirs)
 option(TORCHCS_SAMPLE "Build sample project" OFF)
 
 add_library(torchcs_bedrock INTERFACE)
+
 target_include_directories(torchcs_bedrock INTERFACE 
     $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}>
     $<INSTALL_INTERFACE:include>
