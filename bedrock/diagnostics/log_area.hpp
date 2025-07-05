@@ -1,6 +1,6 @@
 #pragma once
 
-enum class LogAreaId : int
+enum class LogAreaID : int
 {
     ALL,
     PLATFORM,

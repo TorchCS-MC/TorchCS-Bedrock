@@ -17,7 +17,7 @@ namespace Bedrock::Diagnostics
         BedrockLog::LogCategory,
         std::bitset<3>,
         BedrockLog::LogRule,
-        LogAreaId,
+        LogAreaID,
         unsigned int,
         const char *,
         int ,
