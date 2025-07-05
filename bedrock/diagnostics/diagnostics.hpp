@@ -14,13 +14,13 @@ namespace Bedrock::Diagnostics
 {
     //?log@Diagnostics@Bedrock@@YAXW4LogCategory@BedrockLog@@V?$bitset@$02@std@@W4LogRule@4@W4LogAreaID@@IPEBDH4ZZ
     TORCHCS_EXPORT void log(
-        BedrockLog::LogCategory category,
-        std::bitset<3> bitset3,
-        BedrockLog::LogRule rule,
-        LogAreaId area,
-        unsigned int a5,
-        const char *a6,
-        int a7,
-        const char *a8,
-        va_list a9);
+        BedrockLog::LogCategory,
+        std::bitset<3>,
+        BedrockLog::LogRule,
+        LogAreaId,
+        unsigned int,
+        const char *,
+        int ,
+        const char *,
+        va_list);
 }
