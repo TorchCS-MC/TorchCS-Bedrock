@@ -7,8 +7,6 @@ set(CMAKE_CXX_EXTENSIONS OFF)
 
 include(GNUInstallDirs)
 
-option(TORCHCS_SAMPLE "Build sample project" OFF)
-
 add_library(torchcs_bedrock INTERFACE)
 
 target_include_directories(torchcs_bedrock INTERFACE 
@@ -24,10 +22,6 @@ target_include_directories(torchcs_bedrock_impl PRIVATE ${CMAKE_CURRENT_SOURCE_D
 target_link_libraries(torchcs_bedrock_impl PRIVATE torchcs_bedrock)
 
 add_library(torchcs::bedrock ALIAS torchcs_bedrock)
-
-if(TORCHCS_SAMPLE)
-    add_subdirectory(sample)
-endif()
 
 install(DIRECTORY bedrock/
     DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}/bedrock
