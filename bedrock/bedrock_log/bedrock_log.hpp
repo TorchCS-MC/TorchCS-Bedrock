@@ -35,7 +35,7 @@ namespace BedrockLog
     TORCHCS_EXPORT std::string _messageIdString(int);
 
     //?_openChannel@BedrockLog@@YAXAEBVPath@Core@@AEBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@1W4LogCategory@1@W4LogChannel@1@_NPEAVLogSettingsUpdater@@N@Z
-    void _openChannel(
+    TORCHCS_EXPORT void _openChannel(
         const Core::Path &,
         const std::string &,
         const std::string &,
