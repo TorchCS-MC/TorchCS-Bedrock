@@ -1,29 +1,25 @@
 #pragma once
 
 #include "log_area.hpp"
+#include "log_settings_updater.hpp"
+#include "core/path.hpp"
+
 #include "macros.hpp"
 
 #include <string>
 #include <memory>
 #include <vector>
 
-struct LogSettingsUpdater;
-namespace Core
-{
-    class Path;
-}
-
 namespace BedrockLog
 {
     struct LogDetails
     {
+    public:
+        LogDetails &operator=(LogDetails const &);
+        LogDetails(LogDetails const &);
+        LogDetails();
 
-        public:
-            LogDetails& operator=(LogDetails const&);
-            LogDetails(LogDetails const&);
-            LogDetails();
-
-        public:
+    public:
         //?_appendLogEntryMetadata@LogDetails@BedrockLog@@AEAAXAEAV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V34@W4LogAreaID@@I1HH@Z
         TORCHCS_EXPORT void _appendLogEntryMetadata(
             std::string &,
@@ -89,5 +85,4 @@ namespace BedrockLog
         //?updateLogSetting@LogDetails@BedrockLog@@QEAAXAEBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@_N@Z
         void updateLogSetting(const std::string &, bool);
     };
-
 }
