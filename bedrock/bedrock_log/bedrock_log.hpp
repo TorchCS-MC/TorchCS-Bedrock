@@ -1,12 +1,12 @@
 #pragma once
 
-#include "log_area.hpp"
+#include "bedrock/log_area.hpp"
 #include "log_area_filter.hpp"
 #include "log_category.hpp"
 #include "log_channel.hpp"
 #include "log_details.hpp"
 #include "log_rule.hpp"
-#include "scope_exit.hpp"
+#include "bedrock/scope_exit.hpp"
 #include "macros.hpp"
 
 namespace BedrockLog
@@ -69,10 +69,10 @@ namespace BedrockLog
     TORCHCS_EXPORT Bedrock::ScopeExit initialize();
 
     //?initializeLogExtensions@BedrockLog@@YAXXZ
-    void initializeLogExtensions();
+    TORCHCS_EXPORT void initializeLogExtensions();
 
     //?log_va@BedrockLog@@YAXW4LogCategory@1@V?$bitset@$02@std@@W4LogRule@1@W4LogAreaID@@IPEBDH4PEAD@Z
-    void BedrockLog::log_va(
+    TORCHCS_EXPORT void log_va(
         BedrockLog::LogCategory,
         std::bitset<3>,
         BedrockLog::LogRule,
@@ -84,6 +84,6 @@ namespace BedrockLog
         char *);
 
     //?rakDebugLog@BedrockLog@@YAHPEBDZZ
-    int rakDebugLog(const char*, ...);
+    TORCHCS_EXPORT int rakDebugLog(const char*, ...);
 
 }

@@ -23,13 +23,8 @@ target_link_libraries(torchcs_bedrock_impl PRIVATE torchcs_bedrock)
 
 add_library(torchcs::bedrock ALIAS torchcs_bedrock)
 
-install(DIRECTORY bedrock/
-    DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}/bedrock
-)
-
-install(TARGETS torchcs_bedrock
-    EXPORT TorchCSBedrockTargets
-)
+install(DIRECTORY bedrock/ DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}/bedrock)
+install(TARGETS torchcs_bedrock EXPORT TorchCSBedrockTargets)
 
 install(EXPORT TorchCSBedrockTargets
     NAMESPACE torchcs::

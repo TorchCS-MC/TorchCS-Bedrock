@@ -1,8 +1,8 @@
 #pragma once
 
-#include "log_area.hpp"
-#include "log_settings_updater.hpp"
-#include "core/path.hpp"
+#include "bedrock/log_area.hpp"
+#include "bedrock/log_settings_updater.hpp"
+#include "bedrock/core/path.hpp"
 
 #include "macros.hpp"
 
