@@ -5,6 +5,8 @@
 #include "log_category.hpp"
 #include "log_channel.hpp"
 #include "log_details.hpp"
+#include "log_rule.hpp"
+#include "scope_exit.hpp"
 #include "macros.hpp"
 
 namespace BedrockLog
@@ -61,5 +63,27 @@ namespace BedrockLog
         bool);
 
     //?updateLogSetting@BedrockLog@@YAXAEBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@_N@Z
-    TORCHCS_EXPORT void updateLogSetting(const std::string& name, bool value);
+    TORCHCS_EXPORT void updateLogSetting(const std::string &name, bool value);
+
+    //?initialize@BedrockLog@@YA?AVScopeExit@Bedrock@@XZ
+    TORCHCS_EXPORT Bedrock::ScopeExit initialize();
+
+    //?initializeLogExtensions@BedrockLog@@YAXXZ
+    void initializeLogExtensions();
+
+    //?log_va@BedrockLog@@YAXW4LogCategory@1@V?$bitset@$02@std@@W4LogRule@1@W4LogAreaID@@IPEBDH4PEAD@Z
+    void BedrockLog::log_va(
+        BedrockLog::LogCategory,
+        std::bitset<3>,
+        BedrockLog::LogRule,
+        LogAreaID,
+        unsigned int,
+        const char,
+        int,
+        LogAreaID,
+        char *);
+
+    //?rakDebugLog@BedrockLog@@YAHPEBDZZ
+    int rakDebugLog(const char*, ...);
+
 }
